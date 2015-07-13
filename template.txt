@@ -1,0 +1,42 @@
+// After you create your package with for your mod, 
+// this next line will be the first line of any class you create in that package.
+// package your.package.name
+
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+
+@Mod(modid ="test", name ="Test Mod", version = "1.0")
+
+// This next line will always be the name of the class you just created.
+//public class /*ModName*/ {
+    // Here is where you can declare the items and blocks you will create
+
+    // All of the following methods are called in the order you see them here.
+    // First PreInit, then Init, and finally PostInit
+
+    @EventHandler
+    public void preInit(FMLPreInitializationEvent event) {
+        // This is where you tell Minecraft what items or blocks
+        // you are going to be making and bringing into the world.
+
+        // You need to tell Minecraft the names and all the properties.
+
+    }
+
+    @EventHandler
+    public void init(FMLInitializationEvent event) {
+        // This is where you can create code to say how the player
+        // can interact with the block, for example you need to add
+        // a recipe for a block here
+
+    }
+
+    @EventHandler 
+    public void postInit(FMLPostInitializationEvent event) {
+        // This is where you can write code to interact with other mods.
+        // Last to be called.
+    }
+}
